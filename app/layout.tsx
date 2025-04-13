@@ -15,6 +15,17 @@ export const metadata: Metadata = {
   description:
     "PDM GROUP is a venture-led group building tools, managing artists, and advising creative businesses.",
   generator: "v0.dev",
+  icons: {
+    icon: "/images/pdm-logo-white.png",
+    apple: "/images/pdm-logo-white.png",
+  },
+  openGraph: {
+    images: ["/images/pdm-logo-white.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/images/pdm-logo-white.png"],
+  },
 };
 
 export default function RootLayout({
@@ -23,13 +34,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark" suppressHydrationWarning>
+    <html
+      lang="en"
+      className="dark !bg-black"
+      style={{ colorScheme: "dark" }}
+      suppressHydrationWarning
+    >
       <head>
         <script
           dangerouslySetInnerHTML={{
             __html: `
           (function() {
             document.documentElement.classList.add('dark');
+            document.documentElement.style.backgroundColor = '#000';
             localStorage.setItem('theme', 'dark');
           })()
         `,
@@ -37,7 +54,8 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${spaceGrotesk.variable} font-sans antialiased text-foreground`}
+        className={`${spaceGrotesk.variable} font-sans antialiased text-foreground !bg-background`}
+        style={{ backgroundColor: "hsl(var(--background))" }}
       >
         <div className="fixed inset-0 bg-background -z-10" />
         <ThemeProvider
@@ -46,6 +64,7 @@ export default function RootLayout({
           enableSystem={false}
           forcedTheme="dark"
           disableTransitionOnChange
+          themes={["dark"]}
         >
           {children}
         </ThemeProvider>
