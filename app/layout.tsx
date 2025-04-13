@@ -36,7 +36,9 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${spaceGrotesk.variable} font-sans antialiased`}>
+      <body
+        className={`${spaceGrotesk.variable} font-sans antialiased text-foreground`}
+      >
         <div className="fixed inset-0 bg-background -z-10" />
         <ThemeProvider
           attribute="class"
