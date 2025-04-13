@@ -36,8 +36,8 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className="dark !bg-black"
-      style={{ colorScheme: "dark" }}
+      className="dark"
+      style={{ backgroundColor: "#000000" }}
       suppressHydrationWarning
     >
       <head>
@@ -46,7 +46,7 @@ export default function RootLayout({
             __html: `
           (function() {
             document.documentElement.classList.add('dark');
-            document.documentElement.style.backgroundColor = '#000';
+            document.documentElement.style.backgroundColor = '#000000';
             localStorage.setItem('theme', 'dark');
           })()
         `,
@@ -54,10 +54,10 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${spaceGrotesk.variable} font-sans antialiased text-foreground !bg-background`}
-        style={{ backgroundColor: "hsl(var(--background))" }}
+        className={`${spaceGrotesk.variable} font-sans antialiased`}
+        style={{ backgroundColor: "#000000", color: "#FFFFFF" }}
       >
-        <div className="fixed inset-0 bg-background -z-10" />
+        <div className="fixed inset-0 bg-black -z-10" />
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
