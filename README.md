@@ -1,16 +1,41 @@
 # PDM GROUP Website
 
-A modern, responsive website for PDM GROUP built with Next.js, React, and Tailwind CSS.
+The official website for PDM GROUP, showcasing our work with artists and businesses.
 
 ## Features
 
-- 🎨 Modern, responsive design
-- 🌙 Dark mode by default
-- ⚡ Fast page loads with Next.js
-- 🎭 Artist showcase
-- 🛠️ Tools section
-- 📱 Mobile-friendly
-- ♿ Accessibility focused
+- Dark mode by default
+- Responsive design
+- Smooth page transitions with persistent background
+- Artist portfolio showcase
+- Business services overview
+
+## Technical Details
+
+### Page Transitions
+
+The site uses a fixed background layer to prevent white flashes during page transitions. This is implemented through:
+
+- A fixed position background div with negative z-index
+- Consistent dark theme enforcement
+- Loading states that maintain visual consistency
+
+## Development
+
+```bash
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+# Build for production
+npm build
+```
+
+## License
+
+All rights reserved © PDM GROUP
 
 ## Tech Stack
 
@@ -82,10 +107,6 @@ pnpm start
 3. Commit your changes (`git commit -m 'Add some amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Contact
 
