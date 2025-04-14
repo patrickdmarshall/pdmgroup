@@ -27,14 +27,6 @@ const nextConfig = {
     parallelServerBuildTraces: true,
     parallelServerCompiles: true,
   },
-  async rewrites() {
-    return [
-      {
-        source: "/artists/:path*",
-        destination: "/artists/:path*",
-      },
-    ];
-  },
   trailingSlash: false,
 };
 

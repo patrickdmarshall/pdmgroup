@@ -230,6 +230,12 @@ const artists = [
   },
 ]
 
+export async function generateStaticParams() {
+  return artists.map((artist) => ({
+    slug: artist.slug,
+  }))
+}
+
 type Props = {
   params: { slug: string }
 }
