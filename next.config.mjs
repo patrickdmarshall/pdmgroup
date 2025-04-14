@@ -30,11 +30,12 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: "/artists/:slug*",
-        destination: "/artists/:slug*",
+        source: "/artists/:path*",
+        destination: "/artists/:path*",
       },
     ];
   },
+  trailingSlash: false,
 };
 
 if (userConfig) {

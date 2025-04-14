@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
 import "../globals.css";
 import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -31,5 +32,11 @@ export default function ArtistsLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  return (
+    <div className={spaceGrotesk.variable}>
+      <Navbar />
+      {children}
+      <Footer />
+    </div>
+  );
 }
