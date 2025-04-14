@@ -1,37 +1,35 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Space_Grotesk } from "next/font/google"
-import "../globals.css"
-import Navbar from "@/components/navbar"
+import type React from "react";
+import type { Metadata } from "next";
+import { Space_Grotesk } from "next/font/google";
+import "../globals.css";
+import Navbar from "@/components/navbar";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   variable: "--font-space-grotesk",
   display: "swap",
-})
+});
 
 export const metadata: Metadata = {
   title: "Artists | PDM GROUP",
-  description: "Explore the artists managed by PDM GROUP including RMR, Oke Junior, and Tay Da Prince.",
+  description:
+    "Explore the artists managed by PDM GROUP including RMR, Oke Junior, and Tay Da Prince.",
   openGraph: {
     title: "Artists | PDM GROUP",
-    description: "Explore the artists managed by PDM GROUP including RMR, Oke Junior, and Tay Da Prince.",
+    description:
+      "Explore the artists managed by PDM GROUP including RMR, Oke Junior, and Tay Da Prince.",
   },
   twitter: {
     title: "Artists | PDM GROUP",
-    description: "Explore the artists managed by PDM GROUP including RMR, Oke Junior, and Tay Da Prince.",
+    description:
+      "Explore the artists managed by PDM GROUP including RMR, Oke Junior, and Tay Da Prince.",
   },
-}
+};
 
 export default function ArtistsLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
-  return (
-    <>
-      <Navbar />
-      {children}
-    </>
-  )
+}: {
+  children: React.ReactNode;
+}) {
+  return <>{children}</>;
 }
