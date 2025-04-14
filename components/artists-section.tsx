@@ -31,10 +31,11 @@ export default function ArtistsSection() {
     <section className="py-20 md:py-32 bg-secondary/50" id="artists">
       <div className="container mx-auto px-4 md:px-6">
         <div className="mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold">Our Artists</h2>
+          <h2 className="text-3xl md:text-4xl font-bold">Featured Talent</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* Active artists */}
           {artists.map((artist, index) => (
             <Link href={`/artists/${artist.slug}`} key={index}>
               <div className="grid-item group cursor-pointer h-full">

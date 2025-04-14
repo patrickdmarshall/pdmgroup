@@ -44,19 +44,24 @@ export default function HeroSection() {
     >
       <div className="container mx-auto px-4 md:px-6 pt-20">
         <div className="max-w-4xl">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
-            Creative Culture Meets Operational Clarity.
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
+            Creative Business, Done Right.
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-2xl">
-            PDM GROUP is a venture-led group building tools, managing artists, and advising creative businesses.
+          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-10 max-w-2xl">
+            PDM Group supports artists and companies through product, strategy, and execution.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link href="#creatives">
-              <Button className="rounded-none text-lg px-8 py-6 h-auto">For Creatives</Button>
+              <Button className="rounded-none text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 h-auto w-full sm:w-auto">
+                Build With Us
+              </Button>
             </Link>
             <Link href="#businesses">
-              <Button variant="outline" className="rounded-none text-lg px-8 py-6 h-auto">
-                For Businesses
+              <Button
+                variant="outline"
+                className="rounded-none text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 h-auto w-full sm:w-auto"
+              >
+                Create With Us
               </Button>
             </Link>
           </div>

@@ -27,21 +27,28 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between h-16">
         <Link href="/" className="flex items-center">
-          <Image src="/images/pdm-logo-white.png" alt="PDM GROUP" width={80} height={30} className="h-8 w-auto" />
+          <Image
+            src="/images/pdm-logo-white.png"
+            alt="PDM GROUP"
+            width={80}
+            height={30}
+            className="h-8 w-auto"
+            priority
+          />
         </Link>
 
         <nav className="hidden md:flex items-center space-x-8">
-          <Link href="/#creatives" className="text-sm uppercase tracking-wider hover:text-primary/80">
-            For Creatives
+          <Link href="/artists" className="text-sm uppercase tracking-wider hover:text-primary/80">
+            Artists
           </Link>
-          <Link href="/#businesses" className="text-sm uppercase tracking-wider hover:text-primary/80">
-            For Businesses
+          <Link href="/products" className="text-sm uppercase tracking-wider hover:text-primary/80">
+            Products
           </Link>
-          <Link href="/#resources" className="text-sm uppercase tracking-wider hover:text-primary/80">
+          <Link href="/consulting" className="text-sm uppercase tracking-wider hover:text-primary/80">
+            Consulting
+          </Link>
+          <Link href="/resources" className="text-sm uppercase tracking-wider hover:text-primary/80">
             Resources
-          </Link>
-          <Link href="/#about" className="text-sm uppercase tracking-wider hover:text-primary/80">
-            About
           </Link>
           <Link href="/contact">
             <Button variant="outline" className="rounded-none text-sm uppercase tracking-wider">
@@ -52,24 +59,24 @@ export default function Navbar() {
 
         <Sheet>
           <SheetTrigger asChild className="md:hidden">
-            <Button variant="ghost" size="icon">
+            <Button variant="ghost" size="icon" className="focus:outline-none">
               <Menu className="h-5 w-5" />
               <span className="sr-only">Open menu</span>
             </Button>
           </SheetTrigger>
           <SheetContent side="right" className="border-l">
             <nav className="flex flex-col space-y-6 mt-10">
-              <Link href="/#creatives" className="text-lg uppercase tracking-wider">
-                For Creatives
+              <Link href="/artists" className="text-lg uppercase tracking-wider">
+                Artists
               </Link>
-              <Link href="/#businesses" className="text-lg uppercase tracking-wider">
-                For Businesses
+              <Link href="/products" className="text-lg uppercase tracking-wider">
+                Products
               </Link>
-              <Link href="/#resources" className="text-lg uppercase tracking-wider">
+              <Link href="/consulting" className="text-lg uppercase tracking-wider">
+                Consulting
+              </Link>
+              <Link href="/resources" className="text-lg uppercase tracking-wider">
                 Resources
-              </Link>
-              <Link href="/#about" className="text-lg uppercase tracking-wider">
-                About
               </Link>
               <Link href="/contact" className="text-lg uppercase tracking-wider">
                 Contact

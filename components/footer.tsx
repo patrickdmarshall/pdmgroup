@@ -5,7 +5,7 @@ import type React from "react"
 import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { Instagram, Linkedin, ArrowRight } from "lucide-react"
+import { Instagram, Globe, ArrowRight } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 
@@ -14,16 +14,17 @@ export default function Footer() {
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle subscription logic here
-    console.log("Subscribing email:", email)
+    // Route to company.pdm@gmail.com
+    console.log("Subscribing email to company.pdm@gmail.com:", email)
+    alert("Thank you for subscribing! We'll be in touch soon.")
     setEmail("")
   }
 
   return (
     <footer className="py-12 border-t">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-          <div className="md:col-span-1">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+          <div className="col-span-2 md:col-span-1">
             <Image
               src="/images/pdm-logo-white.png"
               alt="PDM GROUP"
@@ -51,22 +52,32 @@ export default function Footer() {
                 className="text-muted-foreground hover:text-foreground transition-colors"
                 aria-label="LinkedIn"
               >
-                <Linkedin className="h-5 w-5" />
+                <Globe className="h-5 w-5" />
               </a>
             </div>
           </div>
 
           <div>
-            <h4 className="text-sm font-medium uppercase tracking-wider mb-4">Services</h4>
+            <h4 className="text-sm font-medium uppercase tracking-wider mb-4">Navigation</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/#creatives" className="text-muted-foreground hover:text-foreground">
-                  For Creatives
+                <Link href="/artists" className="text-muted-foreground hover:text-foreground">
+                  Artists
                 </Link>
               </li>
               <li>
-                <Link href="/#businesses" className="text-muted-foreground hover:text-foreground">
-                  For Businesses
+                <Link href="/products" className="text-muted-foreground hover:text-foreground">
+                  Products
+                </Link>
+              </li>
+              <li>
+                <Link href="/consulting" className="text-muted-foreground hover:text-foreground">
+                  Consulting
+                </Link>
+              </li>
+              <li>
+                <Link href="/resources" className="text-muted-foreground hover:text-foreground">
+                  Resources
                 </Link>
               </li>
             </ul>
@@ -81,8 +92,13 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/#resources" className="text-muted-foreground hover:text-foreground">
-                  Resources
+                <Link href="/#creatives" className="text-muted-foreground hover:text-foreground">
+                  For Creatives
+                </Link>
+              </li>
+              <li>
+                <Link href="/#businesses" className="text-muted-foreground hover:text-foreground">
+                  For Businesses
                 </Link>
               </li>
               <li>
@@ -93,7 +109,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
+          <div className="col-span-2 md:col-span-1">
             <h4 className="text-sm font-medium uppercase tracking-wider mb-4">Legal</h4>
             <ul className="space-y-2">
               <li>
@@ -129,6 +145,17 @@ export default function Footer() {
 
         <div className="pt-6 text-sm text-muted-foreground text-center">
           <p>© {new Date().getFullYear()} PDM GROUP. All rights reserved.</p>
+          <p className="mt-1">
+            Founded & Developed by{" "}
+            <a
+              href="https://www.instagram.com/patrickdmar"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline"
+            >
+              Patrick Marshall
+            </a>
+          </p>
         </div>
       </div>
     </footer>
